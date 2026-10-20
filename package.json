@@ -1,0 +1,14 @@
+{
+  "name": "lift-pickleball-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lift Pickleball — East Bay Pickleball Coaching website (Eleventy + Decap CMS)",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "serve": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
