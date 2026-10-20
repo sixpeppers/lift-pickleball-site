@@ -1,0 +1,113 @@
+---
+layout: base.njk
+permalink: lessons.html
+path: "lessons.html"
+title: "Private & Group Pickleball Lessons in Walnut Creek, Lafayette & Danville | Lift Pickleball"
+description: "Private lessons, semi-private, and group clinics for adult beginners & improvers who want to have fun and win more pickleball games — in Walnut Creek, Lafayette, Danville & the East Bay."
+ogTitle: "Private & Group Pickleball Lessons in Walnut Creek, Lafayette & Danville"
+ogDescription: "Private, semi-private, and group pickleball lessons for adult beginners & improvers across the East Bay."
+breadcrumbName: "Lessons"
+includeOffers: true
+---
+{%- from "base.njk" import icon -%}
+  <section class="hero" style="padding-bottom:10px;">
+    <div class="container" style="max-width:720px; text-align:center; margin:0 auto;">
+      <span class="eyebrow">{{ lessons_page.heroEyebrow }}</span>
+      <h1>{{ lessons_page.heroTitle }}</h1>
+      <p style="font-size:1.15rem; color:var(--ink-soft);">{{ lessons_page.heroSubtitle }}</p>
+    </div>
+  </section>
+
+  <!-- FORMATS -->
+  <section>
+    <div class="container">
+      <div class="grid-3">
+        {%- for f in lessons_page.formats %}
+        <div class="card">
+          <div class="icon-badge {{ f.color }}">
+            {{ icon(f.icon) }}
+          </div>
+          <h3>{{ f.title }}</h3>
+          <p class="text-soft">{{ f.description }}</p>
+          <ul class="check-list">
+            {%- for item in f.checklist %}
+            <li>{{ icon('check') }}<span>{{ item }}</span></li>
+            {%- endfor %}
+          </ul>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILL LEVELS -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="section-head">
+        <h2>{{ lessons_page.skillLevelsHeading }}</h2>
+      </div>
+      <div class="grid-3">
+        {%- for s in lessons_page.skillLevels %}
+        <div class="card">
+          <h3>{{ s.title }}</h3>
+          <p class="text-soft">{{ s.description }}</p>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED -->
+  <section>
+    <div class="container" style="max-width:760px;">
+      <div class="section-head left">
+        <h2>{{ lessons_page.includedHeading }}</h2>
+      </div>
+      <ul class="check-list">
+        {%- for item in lessons_page.included %}
+        <li>{{ icon('check') }}<span>{{ item }}</span></li>
+        {%- endfor %}
+      </ul>
+      <p class="text-soft" style="margin-top:18px;">{{ lessons_page.includedNote }}</p>
+    </div>
+  </section>
+
+  <!-- VIDEO GAME REVIEW -->
+  <section class="bg-white">
+    <div class="container" style="max-width:760px;">
+      <div class="card" style="display:flex; gap:24px; align-items:flex-start; flex-wrap:wrap;">
+        <div class="icon-badge sage" style="flex-shrink:0;">
+          {{ icon('video-camera') }}
+        </div>
+        <div style="flex:1; min-width:220px;">
+          <h3>{{ offers.videoReview.title }}</h3>
+          <p class="text-soft">Not local, or just want feedback between lessons? {{ offers.videoReview.description }} <strong>${{ offers.videoReview.price }}.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white">
+    <div class="container" style="max-width:760px;">
+      <div class="section-head left">
+        <h2>Before you book</h2>
+      </div>
+      {%- for item in faq.lessons %}
+      <div class="faq-item">
+        <h3>{{ item.q }}</h3>
+        <p>{{ item.a }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-band">
+        <h2>Not sure which format is right for you?</h2>
+        <p style="max-width:520px; margin:0 auto 24px;">Reach out and tell me a bit about your experience &mdash; I'll help you pick the best option.</p>
+        <a class="btn btn-light" href="contact.html">Get in Touch</a>
+      </div>
+    </div>
+  </section>

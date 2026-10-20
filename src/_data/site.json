@@ -1,0 +1,36 @@
+{
+  "name": "Lift Pickleball",
+  "tagline": "East Bay Coaching",
+  "founder": "Derric Haynie",
+  "baseUrl": "https://liftpickleball.com",
+  "businessDescription": "Private and group pickleball lessons for adult beginners, improvers, and intermediate players, taught by coach Derric Haynie throughout the East Bay.",
+  "addressLocality": "Walnut Creek",
+  "addressRegion": "CA",
+  "addressCountry": "US",
+  "priceRange": "$40-$70",
+  "heroImage": "images/derric-hero.jpg",
+  "areaServed": [
+    {"type": "City", "name": "Walnut Creek"},
+    {"type": "City", "name": "Lafayette"},
+    {"type": "City", "name": "Orinda"},
+    {"type": "City", "name": "Danville"},
+    {"type": "City", "name": "Concord"},
+    {"type": "City", "name": "Pleasant Hill"},
+    {"type": "Place", "name": "Alamo"},
+    {"type": "Place", "name": "Blackhawk"},
+    {"type": "Place", "name": "Round Hill"},
+    {"type": "Place", "name": "Rossmoor"},
+    {"type": "Place", "name": "East Bay Area, California"}
+  ],
+  "nav": [
+    {"label": "Home", "href": "index.html"},
+    {"label": "About Derric", "href": "about.html"},
+    {"label": "Lessons", "href": "lessons.html"},
+    {"label": "Areas We Serve", "href": "areas.html"},
+    {"label": "Pricing", "href": "pricing.html"},
+    {"label": "Contact", "href": "contact.html"}
+  ],
+  "footerTagline": "East Bay pickleball coaching by Derric Haynie.",
+  "footerCopyright": "© 2026 Lift Pickleball. All rights reserved.",
+  "footerLocation": "Based in Walnut Creek · Serving the greater East Bay"
+}

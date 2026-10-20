@@ -1,0 +1,24 @@
+{
+  "heroEyebrow": "East Bay Pickleball Coaching",
+  "heroTitle": "Have more fun. Win more games.",
+  "heroSubtitle": "Private and small-group pickleball lessons designed for players of all skill levels and ages who want to build confidence on the court and start winning more of their games.",
+  "trustStrip": [
+    {"title": "All Levels", "description": "Programs designed for first-timers, novices, and intermediate players"},
+    {"title": "1-on-1 or Group Sessions", "description": "Individual lessons to help you with your specific game. Or join group skill building lessons, 3rd-shot drop clinics, etc."},
+    {"title": "East Bay Area", "description": "Serving Lafayette, Walnut Creek, Alamo, Danville, Rossmoor, Concord, Pleasant Hill, Orinda, Blackhawk, Round Hill and surrounding areas.", "linkHref": "areas.html", "linkLabel": "See pickleball lessons near you →"},
+    {"title": "Judgment-Free Coaching", "description": "We're in this to have fun and get active. With a few quick tweaks and pieces of advice, you'll be feeling more confident after your first lesson, guaranteed!"}
+  ],
+  "whyLiftHeading": "Pickleball lessons built for beginners & intermediate players who like to win — and have fun doing it",
+  "whyLiftSubheading": "Lift Pickleball focuses on the things that make the biggest difference for adult learners: clear technique, smart strategy, and a coaching style that is casual, yet concise.",
+  "whyLiftCards": [
+    {"icon": "heart", "color": "terracotta", "title": "Build Your Game Confidence", "description": "Learn the shots and positioning that make you feel sure of yourself on the court. Stop hitting overheads into the net. Stop popping up easy dinks. Stop swinging at low balls."},
+    {"icon": "people", "color": "sage", "title": "Stay active & social", "description": "Get a fun, low-impact workout while building real friendships with other pickleballers on the court."},
+    {"icon": "trophy", "color": "gold", "title": "Win More Games", "description": "Take home practical strategy and learn new drills for doubles play."}
+  ],
+  "howItWorksHeading": "Getting started is easy",
+  "howItWorks": [
+    {"title": "Reach out", "description": "Send a text or email with your experience level and what you'd like to work on."},
+    {"title": "Pick your format", "description": "Choose a 1-1 private lesson, a small semi-private, or a group clinic with friends."},
+    {"title": "Get on the court", "description": "We'll agree to meet on a court convenient to you in the East Bay area. Show up with a paddle, some water, and sunscreen, and enjoy strategic, encouraging coaching built around your game, needs, and goals."}
+  ]
+}

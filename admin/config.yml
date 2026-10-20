@@ -1,0 +1,254 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/lift-pickleball-site
+  branch: main
+
+# This tells Decap to open a local build preview; on Netlify it isn't used,
+# but keeping it set avoids a console warning.
+publish_mode: simple
+
+media_folder: "src/images"
+public_folder: "images"
+
+collections:
+  - name: "pricing"
+    label: "Pricing"
+    editor:
+      preview: false
+    files:
+      - name: "offers"
+        label: "Lesson Pricing"
+        file: "src/_data/offers.json"
+        fields:
+          - { label: "Intro note (shown above the price cards)", name: "note", widget: "string" }
+          - label: "Price tiers"
+            name: "tiers"
+            widget: "list"
+            summary: "{{fields.title}} ({{fields.players}}) — ${{fields.price}}/{{fields.unit}}"
+            fields:
+              - { label: "Internal key (do not change)", name: "key", widget: "hidden", default: "" }
+              - { label: "Tier name (e.g. Private, Semi-Private, Group)", name: "title", widget: "string" }
+              - { label: "Player count label (e.g. '1 player', '3 players')", name: "players", widget: "string" }
+              - { label: "Price (number only)", name: "price", widget: "number", value_type: "int" }
+              - { label: "Unit shown after the price (e.g. hr, person)", name: "unit", widget: "hidden", default: "person" }
+              - label: "Feature bullet points"
+                name: "features"
+                widget: "list"
+                field: { label: "Feature", name: "feature", widget: "string" }
+              - { label: "Highlight this tier as the featured/best-value option?", name: "featured", widget: "boolean", default: false }
+          - label: "Video Game Review add-on"
+            name: "videoReview"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Price (number only)", name: "price", widget: "number", value_type: "int" }
+              - { label: "Description", name: "description", widget: "text" }
+
+  - name: "about"
+    label: "About / Bio Page"
+    editor:
+      preview: false
+    files:
+      - name: "about"
+        label: "About Derric Content"
+        file: "src/_data/about.json"
+        fields:
+          - { label: "Hero eyebrow tag", name: "heroEyebrow", widget: "string" }
+          - { label: "Hero heading", name: "heroTitle", widget: "string" }
+          - { label: "Hero intro paragraph", name: "heroIntro", widget: "text" }
+          - label: "Story paragraphs"
+            name: "story"
+            widget: "list"
+            field: { label: "Paragraph (you can use <strong>bold</strong> HTML tags if needed)", name: "paragraph", widget: "text" }
+          - label: "Coaching philosophy cards"
+            name: "philosophy"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Icon (do not change)", name: "icon", widget: "hidden", default: "check" }
+              - { label: "Color (do not change)", name: "color", widget: "hidden", default: "sage" }
+          - { label: "Credentials section note", name: "credentialsNote", widget: "text" }
+          - label: "Credentials / experience cards"
+            name: "credentials"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+  - name: "lessons"
+    label: "Lessons Page"
+    editor:
+      preview: false
+    files:
+      - name: "lessons"
+        label: "Lessons Page Content"
+        file: "src/_data/lessons_page.json"
+        fields:
+          - { label: "Hero eyebrow tag", name: "heroEyebrow", widget: "string" }
+          - { label: "Hero heading", name: "heroTitle", widget: "string" }
+          - { label: "Hero subheading", name: "heroSubtitle", widget: "text" }
+          - label: "Lesson format cards"
+            name: "formats"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon (do not change)", name: "icon", widget: "hidden", default: "check" }
+              - { label: "Color (do not change)", name: "color", widget: "hidden", default: "sage" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Checklist bullet points"
+                name: "checklist"
+                widget: "list"
+                field: { label: "Point", name: "point", widget: "string" }
+          - { label: "Skill-levels section heading", name: "skillLevelsHeading", widget: "string" }
+          - label: "Skill level cards"
+            name: "skillLevels"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - { label: "\"What's included\" heading", name: "includedHeading", widget: "string" }
+          - label: "\"What's included\" checklist"
+            name: "included"
+            widget: "list"
+            field: { label: "Point", name: "point", widget: "string" }
+          - { label: "\"What's included\" note (location blurb)", name: "includedNote", widget: "text" }
+
+  - name: "home"
+    label: "Home Page"
+    editor:
+      preview: false
+    files:
+      - name: "home"
+        label: "Home Page Content"
+        file: "src/_data/index_page.json"
+        fields:
+          - { label: "Hero eyebrow tag", name: "heroEyebrow", widget: "string" }
+          - { label: "Hero heading", name: "heroTitle", widget: "string" }
+          - { label: "Hero subheading", name: "heroSubtitle", widget: "text" }
+          - label: "Trust strip (4 stat boxes under the hero)"
+            name: "trustStrip"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link URL (optional)", name: "linkHref", widget: "string", required: false }
+              - { label: "Link text (optional)", name: "linkLabel", widget: "string", required: false }
+          - { label: "\"Why Lift\" heading", name: "whyLiftHeading", widget: "string" }
+          - { label: "\"Why Lift\" subheading", name: "whyLiftSubheading", widget: "text" }
+          - label: "\"Why Lift\" cards"
+            name: "whyLiftCards"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon (do not change)", name: "icon", widget: "hidden", default: "check" }
+              - { label: "Color (do not change)", name: "color", widget: "hidden", default: "sage" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - { label: "\"How it works\" heading", name: "howItWorksHeading", widget: "string" }
+          - label: "\"How it works\" steps"
+            name: "howItWorks"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+  - name: "contact"
+    label: "Contact Page"
+    editor:
+      preview: false
+    files:
+      - name: "contact"
+        label: "Contact Page Content"
+        file: "src/_data/contact_page.json"
+        fields:
+          - { label: "Hero eyebrow tag", name: "heroEyebrow", widget: "string" }
+          - { label: "Hero heading", name: "heroTitle", widget: "string" }
+          - { label: "Hero subheading", name: "heroSubtitle", widget: "text" }
+          - { label: "\"Based in Walnut Creek\" note", name: "locationNote", widget: "text" }
+          - label: "\"What to include in your message\" checklist"
+            name: "includeChecklist"
+            widget: "list"
+            field: { label: "Point", name: "point", widget: "string" }
+          - { label: "Quick-start card title", name: "quickStartTitle", widget: "string" }
+          - { label: "Quick-start card description", name: "quickStartDescription", widget: "text" }
+
+  - name: "areas"
+    label: "Areas We Serve"
+    editor:
+      preview: false
+    files:
+      - name: "areas"
+        label: "City / Area Blurbs"
+        file: "src/_data/areas.json"
+        fields:
+          - label: "Areas"
+            name: "areas"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "City / area name", name: "name", widget: "string" }
+              - { label: "Blurb (1-2 sentences)", name: "blurb", widget: "text" }
+
+  - name: "testimonials"
+    label: "Testimonials"
+    editor:
+      preview: false
+    files:
+      - name: "testimonials"
+        label: "Homepage Testimonials"
+        file: "src/_data/testimonials.json"
+        fields:
+          - { label: "Note shown above the quotes", name: "note", widget: "string" }
+          - label: "Quotes"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.author}}"
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Student name (or 'Client Name' if still a placeholder)", name: "author", widget: "string" }
+              - { label: "Is this still a sample/placeholder quote?", name: "sample", widget: "boolean", default: true }
+
+  - name: "faq"
+    label: "FAQ Answers"
+    editor:
+      preview: false
+    files:
+      - name: "faq"
+        label: "FAQ Answers (Pricing, Contact, Areas & Lessons pages)"
+        file: "src/_data/faq.json"
+        fields:
+          - label: "Pricing page FAQ"
+            name: "pricing"
+            widget: "list"
+            summary: "{{fields.q}}"
+            fields:
+              - { label: "Question", name: "q", widget: "string" }
+              - { label: "Answer", name: "a", widget: "text" }
+          - label: "Contact page FAQ"
+            name: "contact"
+            widget: "list"
+            summary: "{{fields.q}}"
+            fields:
+              - { label: "Question", name: "q", widget: "string" }
+              - { label: "Answer", name: "a", widget: "text" }
+          - label: "Areas We Serve page FAQ"
+            name: "areas"
+            widget: "list"
+            summary: "{{fields.q}}"
+            fields:
+              - { label: "Question", name: "q", widget: "string" }
+              - { label: "Answer", name: "a", widget: "text" }
+          - label: "Lessons page FAQ (\"Before you book\")"
+            name: "lessons"
+            widget: "list"
+            summary: "{{fields.q}}"
+            fields:
+              - { label: "Question", name: "q", widget: "string" }
+              - { label: "Answer", name: "a", widget: "text" }

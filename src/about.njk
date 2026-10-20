@@ -1,0 +1,91 @@
+---
+layout: base.njk
+permalink: about.html
+path: "about.html"
+title: "Meet Derric Haynie | East Bay Pickleball Coach | Lift Pickleball"
+description: "Meet Derric Haynie, East Bay pickleball coach who helps adult beginners & improvers build confidence, have fun, and win more games."
+ogType: "profile"
+ogTitle: "Meet Derric Haynie | East Bay Pickleball Coach"
+ogDescription: "A strategy-and-analytics approach to pickleball coaching for adult beginners and improvers in the East Bay."
+breadcrumbName: "About Derric"
+---
+{%- from "base.njk" import icon -%}
+  <section class="hero" style="padding-bottom:20px;">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">{{ about.heroEyebrow }}</span>
+        <h1>{{ about.heroTitle }}</h1>
+        <p style="font-size:1.2rem; color:var(--ink-soft); max-width:520px;">
+          {{ about.heroIntro }}
+        </p>
+      </div>
+      <div class="hero-art">
+        <div class="photo-placeholder">
+          {{ icon('photo-placeholder') }}
+          <strong>Add a headshot or coaching photo</strong>
+          <small>A friendly, approachable photo of Derric helps visitors feel comfortable reaching out.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="bg-white">
+    <div class="container" style="max-width:760px;">
+      <h2>My story</h2>
+      {%- for p in about.story %}
+      <p class="text-soft">
+        {{ p | safe }}
+      </p>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <h2>My coaching philosophy</h2>
+        <p class="text-soft">Four things guide every lesson, private or group.</p>
+      </div>
+      <div class="grid-2">
+        {%- for item in about.philosophy %}
+        <div class="card">
+          <div class="icon-badge {{ item.color }}">
+            {{ icon(item.icon) }}
+          </div>
+          <h3>{{ item.title }}</h3>
+          <p class="text-soft">{{ item.description }}</p>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="bg-sage">
+    <div class="container">
+      <div class="section-head">
+        <h2>Credentials &amp; experience</h2>
+        <p class="text-soft">{{ about.credentialsNote }}</p>
+      </div>
+      <div class="grid-3">
+        {%- for c in about.credentials %}
+        <div class="card center">
+          <h3>{{ c.title }}</h3>
+          <p class="text-soft">{{ c.description }}</p>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-band">
+        <h2>Let's get you on the court</h2>
+        <p style="max-width:520px; margin:0 auto 24px;">Whether you're brand new or ready to sharpen your strategy, I'd love to help.</p>
+        <a class="btn btn-light" href="contact.html">Book Your First Lesson</a>
+      </div>
+    </div>
+  </section>

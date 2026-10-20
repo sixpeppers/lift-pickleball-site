@@ -1,0 +1,27 @@
+{
+  "pricing": [
+    {"q": "What forms of payment do you accept?", "a": "[Add your accepted payment methods — e.g. Venmo, Zelle, card.]"},
+    {"q": "What's your cancellation policy?", "a": "[Add your cancellation/rescheduling policy here.]"},
+    {"q": "Do I need my own paddle?", "a": "[Confirm whether loaner paddles are available, or link to a recommended beginner paddle.]"},
+    {"q": "Where do lessons take place?", "a": "Based in Walnut Creek, with lessons at courts around the greater East Bay. [List specific courts once confirmed.]"},
+    {"q": "Do you offer a discount for booking multiple lessons at once?", "a": "Not as an upfront bundle discount — lessons are simply pay-as-you-go. But after your first lesson, if you're ready to commit to ongoing coaching, I offer a structured 8-week program for $480, which works out to a better value than booking single lessons indefinitely."}
+  ],
+  "contact": [
+    {"q": "How quickly will I hear back?", "a": "Usually within a day — often much sooner."},
+    {"q": "Do you offer a first-lesson discount?", "a": "No special first-lesson discount, but there's no commitment required — book a single lesson and decide from there. If you want to go further after that, ask about the 8-week program."},
+    {"q": "What should I bring to my first lesson?", "a": "Water, comfortable athletic or court shoes, and sunscreen. If you already have a paddle, bring it — if not, just mention that when you reach out."}
+  ],
+  "areas": [
+    {"q": "Do you travel to me, or do I come to you?", "a": "Lift Pickleball is based in Walnut Creek, and most lessons happen at a court that's convenient for both of us somewhere in the surrounding East Bay. Reach out with your city and we'll find a spot nearby."},
+    {"q": "What if my city isn't listed?", "a": "The cities above aren't exhaustive. If you're anywhere in the greater East Bay, get in touch and we'll figure out a court that works for both of us."},
+    {"q": "Is there an extra fee for lessons outside Walnut Creek?", "a": "[Add your travel fee policy here, if any, for lessons beyond a certain distance from Walnut Creek.]"}
+  ],
+  "lessons": [
+    {"q": "I'm not very athletic — is that a problem?", "a": "Not at all. Most students start exactly where you are, and lessons are built around your current fitness level, not some assumed baseline. We'll work at a pace that challenges you without wearing you out."},
+    {"q": "Do I need to commit to a bunch of lessons, or can I just try one?", "a": "Just book one. There's no package or commitment required to get started — see how it feels, then decide if you want to keep going. If you do want to commit further down the road, ask about the 8-week program."},
+    {"q": "What happens if it rains?", "a": "Lessons are played outdoors, so we'll reschedule together if the weather doesn't cooperate — just keep an eye out for a text or email from me if conditions look iffy."},
+    {"q": "What if I have a bad knee, shoulder, or other physical limitation?", "a": "Let me know ahead of time and we'll adjust the pace, drills, and movement accordingly. I'm not a medical professional, so if you have a specific injury concern, it's worth checking with your doctor first — but plenty of students manage around physical limitations just fine."},
+    {"q": "Do you coach kids or teens?", "a": "Lift Pickleball's focus is adult students, but I'm open to coaching teens on a case-by-case basis — reach out and tell me a bit about the student and we'll figure out if it's a good fit."},
+    {"q": "How is a private lesson different from a free clinic or just playing open play?", "a": "Open play and free clinics are great for reps, but nobody's watching your specific game. A lesson means personalized feedback on exactly what's holding your game back, with a coach who adjusts in real time instead of generic group instruction."}
+  ]
+}

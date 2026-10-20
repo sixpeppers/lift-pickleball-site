@@ -1,0 +1,14 @@
+{
+  "areas": [
+    {"name": "Walnut Creek", "blurb": "Home base for Lift Pickleball. Most lessons happen here or close by, so it's easy to find court time that fits your schedule."},
+    {"name": "Lafayette", "blurb": "Just down Highway 24 from Walnut Creek — Lafayette players get the same coaching without a long drive."},
+    {"name": "Orinda", "blurb": "A short trip along Highway 24, Orinda is an easy add-on for a lesson or a weekend clinic."},
+    {"name": "Danville", "blurb": "Serving Danville and the surrounding Tri-Valley, with sessions scheduled at courts convenient to you."},
+    {"name": "Alamo", "blurb": "Nestled between Walnut Creek and Danville, Alamo sits right in the middle of Lift Pickleball's regular coaching area."},
+    {"name": "Blackhawk", "blurb": "A quick drive from Walnut Creek — lessons for Blackhawk residents can be scheduled at nearby public courts."},
+    {"name": "Round Hill", "blurb": "Round Hill players are close to the same courts used for Danville and Alamo lessons — easy to fit into a regular schedule."},
+    {"name": "Rossmoor", "blurb": "Right in Walnut Creek, Rossmoor is one of the closest communities to home base — convenient, low-hassle scheduling."},
+    {"name": "Concord", "blurb": "North of Walnut Creek along I-680, Concord is a regular stop on the East Bay coaching rotation."},
+    {"name": "Pleasant Hill", "blurb": "Sitting between Walnut Creek and Concord, Pleasant Hill is squarely on Lift Pickleball's regular route."}
+  ]
+}

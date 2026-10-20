@@ -1,0 +1,103 @@
+---
+layout: base.njk
+permalink: contact.html
+path: "contact.html"
+title: "Book Pickleball Lessons | Walnut Creek & East Bay | Lift Pickleball"
+description: "Get in touch with Derric Haynie at Lift Pickleball to book a private or group pickleball lesson in Walnut Creek, Lafayette, Danville & the East Bay."
+ogTitle: "Book Pickleball Lessons | Walnut Creek & East Bay"
+ogDescription: "Reach out to book a private or group pickleball lesson with coach Derric Haynie across the East Bay."
+breadcrumbName: "Contact"
+includeContactProtect: true
+---
+{%- from "base.njk" import icon -%}
+  <section class="hero" style="padding-bottom:10px;">
+    <div class="container" style="max-width:720px; text-align:center; margin:0 auto;">
+      <span class="eyebrow">{{ contact_page.heroEyebrow }}</span>
+      <h1>{{ contact_page.heroTitle }}</h1>
+      <p style="font-size:1.15rem; color:var(--ink-soft);">{{ contact_page.heroSubtitle }}</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container contact-grid">
+      <!-- LEFT: how to reach + what to include -->
+      <div>
+        <div class="contact-item">
+          <div class="icon-badge terracotta">
+            {{ icon('mail') }}
+          </div>
+          <div>
+            <h3 style="margin-bottom:2px;">Email</h3>
+            <a class="js-email-link" data-subject="Pickleball Lesson Inquiry" data-fill-text href="#" style="font-size:1.1rem; font-weight:700;">Loading&hellip;</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon-badge sage">
+            {{ icon('phone') }}
+          </div>
+          <div>
+            <h3 style="margin-bottom:2px;">Call or Text</h3>
+            <a class="js-phone-link" data-fill-text href="#" style="font-size:1.1rem; font-weight:700;">Loading&hellip;</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon-badge gold">
+            {{ icon('pin') }}
+          </div>
+          <div>
+            <h3 style="margin-bottom:2px;">Based in Walnut Creek</h3>
+            <p class="text-soft" style="margin:0;">{{ contact_page.locationNote }}</p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:8px;">
+          <h3>Rates at a glance</h3>
+          <ul class="price-list">
+            {%- for t in offers.tiers %}
+            <li>{{ icon('check') }}<span>{{ t.title }} ({{ t.players }}) &mdash; ${{ t.price }}/{{ t.unit }}</span></li>
+            {%- endfor %}
+          </ul>
+          <a href="pricing.html" style="font-weight:700;">See full pricing &amp; video review rates &rarr;</a>
+        </div>
+
+        <div class="card" style="margin-top:8px;">
+          <h3>What to include in your message</h3>
+          <ul class="check-list">
+            {%- for item in contact_page.includeChecklist %}
+            <li>{{ icon('check') }}<span>{{ item }}</span></li>
+            {%- endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <!-- RIGHT: quick-start card -->
+      <div>
+        <div class="card" style="text-align:center; padding:40px 28px;">
+          <div class="icon-badge terracotta" style="margin:0 auto 18px;">
+            {{ icon('heart') }}
+          </div>
+          <h2 style="font-size:1.6rem;">{{ contact_page.quickStartTitle }}</h2>
+          <p class="text-soft">{{ contact_page.quickStartDescription }}</p>
+          <div style="display:flex; flex-direction:column; gap:12px; margin-top:20px;">
+            <a class="btn btn-primary center js-email-link" data-subject="Pickleball Lesson Inquiry" href="#" style="justify-content:center;">Email Derric</a>
+            <a class="btn btn-secondary center js-phone-link" href="#" style="justify-content:center;">Call or Text</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white">
+    <div class="container" style="max-width:760px;">
+      <div class="section-head left">
+        <h2>Frequently asked questions</h2>
+      </div>
+      {%- for item in faq.contact %}
+      <div class="faq-item">
+        <h3>{{ item.q }}</h3>
+        <p>{{ item.a }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </section>

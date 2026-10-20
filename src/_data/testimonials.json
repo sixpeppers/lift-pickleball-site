@@ -1,0 +1,20 @@
+{
+  "note": "Sample testimonials below — swap in quotes from your own students.",
+  "items": [
+    {
+      "quote": "Derric is so patient and encouraging. I went from being nervous at the net to actually looking forward to it.",
+      "author": "Client Name",
+      "sample": true
+    },
+    {
+      "quote": "My friends and I did a group clinic and it was the most fun we've had in months — plus we actually improved!",
+      "author": "Client Name",
+      "sample": true
+    },
+    {
+      "quote": "I finally understand strategy, not just how to hit the ball. We're winning way more of our league matches now.",
+      "author": "Client Name",
+      "sample": true
+    }
+  ]
+}

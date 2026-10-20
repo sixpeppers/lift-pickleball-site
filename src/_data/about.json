@@ -1,0 +1,22 @@
+{
+  "heroEyebrow": "About Your Coach",
+  "heroTitle": "Hi, I'm Derric.",
+  "heroIntro": "I started Lift Pickleball because I love watching someone go from \"I hope I don't embarrass myself out there\" to \"I can't wait for my next game.\" That shift is the whole point.",
+  "story": [
+    "I grew up playing tennis in high school, but pickleball is what really hooked me. Before I coached pickleball full-time, I coached professionally in a completely different arena: poker. Years spent teaching players to read situations, weigh risk, and make sharper decisions under pressure translated surprisingly well to a pickleball court.",
+    "These days I play and coach pickleball daily out of Walnut Creek, carrying a 4.8+ DUPR rating. My approach comes down to three words: <strong>Position. Placement. Power.</strong> — in that order. Most players try to overpower the ball before they've locked in where they're standing and where they're aiming. We fix that first, and the wins follow.",
+    "With Lift Pickleball, I've pointed that same strategy-and-analytics approach at adult beginners and improvers specifically — players picking up the game as adults, or leveling up from casual weekend rallies into real strategy. I love coaching this stage because the improvement curve is so rewarding to watch, and because too many capable players get taught by coaches who assume everyone already knows the fundamentals."
+  ],
+  "philosophy": [
+    {"title": "Patient, not pressured", "description": "There's no such thing as a silly question. We move at a pace that builds real confidence, not anxiety.", "icon": "check", "color": "terracotta"},
+    {"title": "One or two things at a time", "description": "Real improvement comes from focusing on a couple of specific, fixable habits per lesson — not a firehose of tips.", "icon": "bars", "color": "sage"},
+    {"title": "Fun is the strategy", "description": "Players who are having fun practice more, relax more, and improve faster. So we keep it light.", "icon": "heart", "color": "gold"},
+    {"title": "Strategy that wins games", "description": "Beyond technique, we work on doubles positioning and shot selection — the stuff that actually wins points.", "icon": "trophy", "color": "terracotta"}
+  ],
+  "credentialsNote": "[This list reflects what's on your old site — add certifications or student counts if you'd like them featured.]",
+  "credentials": [
+    {"title": "4.8+ DUPR", "description": "Current competitive rating, based in Walnut Creek."},
+    {"title": "Daily on the court", "description": "Plays and coaches pickleball every day."},
+    {"title": "Pro coaching background", "description": "Former professional poker coach & high school tennis player — a strategy-and-analytics approach to every lesson."}
+  ]
+}

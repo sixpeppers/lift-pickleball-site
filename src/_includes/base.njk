@@ -1,0 +1,143 @@
+{%- macro icon(name) -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">{{ icons[name] | safe }}</svg>{%- endmacro -%}
+{%- macro checkIcon() -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{{ icons.check | safe }}</svg>{%- endmacro -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ site.baseUrl }}/{{ canonicalPath | default(path) }}">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<meta property="og:type" content="{{ ogType | default('website') }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ ogTitle | default(title) }}">
+<meta property="og:description" content="{{ ogDescription | default(description) }}">
+<meta property="og:url" content="{{ site.baseUrl }}/{{ canonicalPath | default(path) }}">
+<meta property="og:image" content="{{ site.baseUrl }}/{{ site.heroImage }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ ogTitle | default(title) }}">
+<meta name="twitter:description" content="{{ ogDescription | default(description) }}">
+<meta name="twitter:image" content="{{ site.baseUrl }}/{{ site.heroImage }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "{{ site.baseUrl }}/#business",
+  "name": "{{ site.name }}",
+  "description": "{{ site.businessDescription }}",
+  "url": "{{ site.baseUrl }}/",
+  "image": "{{ site.baseUrl }}/{{ site.heroImage }}",
+  "priceRange": "{{ site.priceRange }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "{{ site.addressLocality }}",
+    "addressRegion": "{{ site.addressRegion }}",
+    "addressCountry": "{{ site.addressCountry }}"
+  },
+  "areaServed": [
+{%- for a in site.areaServed %}
+    {"@type": "{{ a.type }}", "name": "{{ a.name }}"}{% if not loop.last %},{% endif %}
+{%- endfor %}
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "{{ site.founder }}"
+  }{% if includeOffers %},
+  "makesOffer": [
+{%- for t in offers.tiers %}
+    {"@type": "Offer", "name": "{{ t.title }} Pickleball Lesson ({{ t.players }})", "price": "{{ t.price }}", "priceCurrency": "USD"},
+{%- endfor %}
+    {"@type": "Offer", "name": "{{ offers.videoReview.title }}", "price": "{{ offers.videoReview.price }}", "priceCurrency": "USD"}
+  ]{% endif %}
+}
+</script>
+{% if breadcrumbName %}<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.baseUrl }}/"},
+    {"@type": "ListItem", "position": 2, "name": "{{ breadcrumbName }}", "item": "{{ site.baseUrl }}/{{ path }}"}
+  ]
+}
+</script>{% endif %}
+{% if path == "areas.html" or path == "lessons.html" %}<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+{%- set faqItems = faq.areas if path == "areas.html" else faq.lessons %}
+{%- for item in faqItems %}
+    {
+      "@type": "Question",
+      "name": "{{ item.q | safe }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ item.a | safe }}"
+      }
+    }{% if not loop.last %},{% endif %}
+{%- endfor %}
+  ]
+}
+</script>{% endif %}
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="23" fill="#E7EEE1" stroke="#7E9A72" stroke-width="1.5"/>
+        <path d="M16 30C16 22 20 17 27 16C29 20 29 26 25 30C21 34 18 33 16 30Z" fill="#DD7C55"/>
+        <circle cx="30" cy="14" r="1.6" fill="#3E3226"/>
+        <line x1="16" y1="30" x2="10" y2="37" stroke="#5F7A54" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">{{ site.name }}<span>{{ site.tagline }}</span></span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        {%- for item in site.nav %}
+        <li><a href="{{ item.href }}"{% if item.href == path %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {%- endfor %}
+        <li class="nav-cta"><a class="btn btn-primary" href="contact.html">Book a Lesson</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      {{ icon('hamburger') }}
+    </button>
+  </div>
+</header>
+
+<main>
+{{ content | safe }}
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">{{ site.name }}</div>
+        <p style="color:#B9AF9E; margin-top:6px; max-width:280px;">{{ site.footerTagline }}</p>
+      </div>
+      <ul class="footer-links">
+        {%- for item in site.nav %}
+        <li><a href="{{ item.href }}">{{ item.label | replace(" Derric", "") }}</a></li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>{{ site.footerCopyright }}</span>
+      <span>{{ site.footerLocation }}</span>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+{% if includeContactProtect %}<script src="contact-protect.js"></script>{% endif %}
+</body>
+</html>

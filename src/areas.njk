@@ -1,0 +1,57 @@
+---
+layout: base.njk
+permalink: areas.html
+path: "areas.html"
+title: "Pickleball Coach Near You: Lafayette, Danville, Concord, Alamo & More | Lift Pickleball"
+description: "Lift Pickleball offers private & group pickleball lessons throughout the East Bay — Walnut Creek, Lafayette, Orinda, Danville, Alamo, Blackhawk, Round Hill, Rossmoor, Concord & Pleasant Hill."
+ogTitle: "Pickleball Coach Near You: Lafayette, Danville, Concord, Alamo & More"
+ogDescription: "Private & group pickleball lessons throughout the East Bay, based in Walnut Creek."
+breadcrumbName: "Areas We Serve"
+---
+{%- from "base.njk" import icon -%}
+  <section class="hero" style="padding-bottom:10px;">
+    <div class="container" style="max-width:760px; text-align:center; margin:0 auto;">
+      <span class="eyebrow">Areas We Serve</span>
+      <h1>Pickleball lessons across the East Bay</h1>
+      <p style="font-size:1.15rem; color:var(--ink-soft);">Based in Walnut Creek, Lift Pickleball coaches players throughout the surrounding East Bay. Find your area below, then reach out to book.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="grid-3">
+        {%- for a in areas.areas %}
+        <div class="card">
+          <h3>{{ a.name }}</h3>
+          <p class="text-soft">{{ a.blurb }}</p>
+        </div>
+        {%- endfor %}
+      </div>
+      <p class="text-soft center" style="margin-top:32px;">Don't see your neighborhood? If you're anywhere in the greater East Bay, <a href="contact.html" style="font-weight:700;">reach out</a> &mdash; there's a good chance we can still find a court that works.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white">
+    <div class="container" style="max-width:760px;">
+      <div class="section-head left">
+        <h2>Good to know</h2>
+      </div>
+      {%- for item in faq.areas %}
+      <div class="faq-item">
+        <h3>{{ item.q }}</h3>
+        <p>{{ item.a }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-band">
+        <h2>Ready to book a lesson near you?</h2>
+        <p style="max-width:520px; margin:0 auto 24px;">Tell me your city and what you'd like to work on, and I'll help you find a time and place that works.</p>
+        <a class="btn btn-light" href="contact.html">Book a Lesson</a>
+      </div>
+    </div>
+  </section>

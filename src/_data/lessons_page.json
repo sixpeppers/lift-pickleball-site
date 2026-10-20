@@ -1,0 +1,24 @@
+{
+  "heroEyebrow": "Lesson Options",
+  "heroTitle": "Find the format that fits you",
+  "heroSubtitle": "Whether you want one-on-one attention or a fun morning on the court with friends, there's a lesson format built for you.",
+  "formats": [
+    {"icon": "person-single", "color": "terracotta", "title": "Private Lessons", "description": "One-on-one coaching built entirely around your game. Ideal if you want fast progress or have specific things to work on.", "checklist": ["100% focused on your goals", "Flexible scheduling", "Fastest way to improve"]},
+    {"icon": "duo-chemistry", "color": "sage", "title": "Semi-Private (2 players)", "description": "Bring a friend, spouse, or doubles partner. Great for working on chemistry and communication as a team.", "checklist": ["Split the cost with a partner", "Build real doubles chemistry", "Still highly personalized"]},
+    {"icon": "people", "color": "gold", "title": "Group Clinics", "description": "Small groups of 3–4 players, with per-person rates that get better as your group grows. Great for friend groups working on the same skills together.", "checklist": ["Meet other local players", "Lower cost per person", "New focus skill each session"]}
+  ],
+  "skillLevelsHeading": "Whatever your skill level, we'll meet you there",
+  "skillLevels": [
+    {"title": "New to Pickleball", "description": "Learn the rules, the basic shots, and court positioning in a relaxed, no-pressure setting. No athletic background needed."},
+    {"title": "Casual Player", "description": "You've been playing for a while and want to move beyond the basics — better consistency, smarter shot selection, and real strategy."},
+    {"title": "Competitive Player", "description": "Preparing for league play or tournaments? We'll sharpen the details that turn close games into wins."}
+  ],
+  "includedHeading": "What's included in every lesson",
+  "included": [
+    "A quick check-in on your goals and what you want to work on that day",
+    "Hands-on technique coaching with lots of live-ball reps",
+    "Simple, memorable takeaways you can use in your very next game",
+    "Loaner paddles available if you don't have your own yet [confirm this is true]"
+  ],
+  "includedNote": "Based in Walnut Creek, with lessons held at courts around the greater East Bay. [Add specific court names/addresses once confirmed.]"
+}

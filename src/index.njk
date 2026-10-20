@@ -1,0 +1,120 @@
+---
+layout: base.njk
+permalink: index.html
+path: "index.html"
+canonicalPath: ""
+title: "Pickleball Lessons & Coaching in Walnut Creek, Lafayette & the East Bay | Lift Pickleball"
+description: "Private & group pickleball lessons in Walnut Creek, Lafayette, Danville, Concord & the East Bay. Judgment-free coaching for adult beginners & improvers with Derric Haynie."
+ogTitle: "Pickleball Lessons & Coaching in Walnut Creek, Lafayette & the East Bay"
+ogDescription: "Private & group pickleball lessons for adult beginners & improvers, taught by coach Derric Haynie throughout the East Bay."
+includeOffers: true
+---
+{%- from "base.njk" import icon -%}
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">{{ index_page.heroEyebrow }}</span>
+        <h1>{{ index_page.heroTitle }}</h1>
+        <p style="font-size:1.2rem; color:var(--ink-soft); max-width:520px;">
+          {{ index_page.heroSubtitle }}
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contact.html">Book Your First Lesson</a>
+          <a class="btn btn-secondary" href="lessons.html">See Lesson Options</a>
+        </div>
+      </div>
+      <div class="hero-art has-photo">
+        <img class="framed-photo" src="images/derric-hero.jpg" alt="Derric Haynie, East Bay pickleball coach, ready at the kitchen line during a match">
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section style="padding-top:0; padding-bottom:0;">
+    <div class="container">
+      <div class="card" style="display:flex; flex-wrap:wrap; gap:28px; justify-content:space-around; text-align:center; padding:26px;">
+        {%- for item in index_page.trustStrip %}
+        <div>
+          <div style="font-family:var(--font-head); font-weight:700; font-size:1.7rem; color:var(--terracotta-deep);">{{ item.title }}</div>
+          <div class="text-soft">
+            {{ item.description }}
+            {%- if item.linkHref %}
+            <a href="{{ item.linkHref }}" style="display:inline-block; margin-top:4px; font-weight:700;">{{ item.linkLabel }}</a>
+            {%- endif %}
+          </div>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY LIFT -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <h2>{{ index_page.whyLiftHeading }}</h2>
+        <p class="text-soft">{{ index_page.whyLiftSubheading }}</p>
+      </div>
+      <div class="grid-3">
+        {%- for card in index_page.whyLiftCards %}
+        <div class="card">
+          <div class="icon-badge {{ card.color }}">
+            {{ icon(card.icon) }}
+          </div>
+          <h3>{{ card.title }}</h3>
+          <p class="text-soft">{{ card.description }}</p>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="section-head">
+        <h2>{{ index_page.howItWorksHeading }}</h2>
+      </div>
+      <div class="steps">
+        {%- for step in index_page.howItWorks %}
+        <div>
+          <div class="step-num">{{ loop.index }}</div>
+          <h3>{{ step.title }}</h3>
+          <p class="text-soft">{{ step.description }}</p>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <h2>What players are saying</h2>
+        <p class="text-soft">{{ testimonials.note }}</p>
+      </div>
+      <div class="grid-3">
+        {%- for t in testimonials.items %}
+        <div class="quote-card">
+          <span class="quote-mark">&ldquo;</span>
+          <p>{{ t.quote }}</p>
+          <div class="quote-author">&mdash; {{ t.author }}</div>
+          {%- if t.sample %}<span class="placeholder-tag">Sample quote</span>{%- endif %}
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="container">
+      <div class="cta-band">
+        <h2>Ready to lift your game?</h2>
+        <p style="max-width:520px; margin:0 auto 24px;">Spots are limited each week &mdash; reach out today to grab a lesson time that works for you.</p>
+        <a class="btn btn-light" href="contact.html">Book Your First Lesson</a>
+      </div>
+    </div>
+  </section>

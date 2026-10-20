@@ -1,0 +1,46 @@
+{
+  "note": "The more players in your lesson, the lower the per-person rate — bring friends and split the cost.",
+  "tiers": [
+    {
+      "key": "private",
+      "title": "Private",
+      "players": "1 player",
+      "price": 70,
+      "unit": "hr",
+      "features": ["1-on-1 coaching", "Fully customized to you"],
+      "featured": false
+    },
+    {
+      "key": "semiprivate",
+      "title": "Semi-Private",
+      "players": "2 players",
+      "price": 55,
+      "unit": "person",
+      "features": ["$110 total per hour", "Bring a friend or partner"],
+      "featured": false
+    },
+    {
+      "key": "group3",
+      "title": "Group",
+      "players": "3 players",
+      "price": 45,
+      "unit": "person",
+      "features": ["$135 total per hour", "Great for a small friend group"],
+      "featured": false
+    },
+    {
+      "key": "group4",
+      "title": "Group",
+      "players": "4 players",
+      "price": 40,
+      "unit": "person",
+      "features": ["$160 total per hour", "Best per-person rate"],
+      "featured": true
+    }
+  ],
+  "videoReview": {
+    "title": "Video Game Review",
+    "price": 60,
+    "description": "Send video of your match and get a full breakdown — positioning, shot selection, and what's costing you points. Private or shared publicly, your choice."
+  }
+}

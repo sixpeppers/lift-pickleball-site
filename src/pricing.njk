@@ -1,0 +1,73 @@
+---
+layout: base.njk
+permalink: pricing.html
+path: "pricing.html"
+title: "Pickleball Lesson Pricing | Walnut Creek & East Bay Coaching Rates | Lift Pickleball"
+description: "Clear per-person pricing for private, semi-private, and group pickleball lessons with Lift Pickleball in Walnut Creek, Lafayette, Danville & the East Bay."
+ogTitle: "Pickleball Lesson Pricing | Walnut Creek & East Bay Coaching Rates"
+ogDescription: "Clear per-person pricing for private, semi-private, and group pickleball lessons across the East Bay."
+breadcrumbName: "Pricing"
+includeOffers: true
+---
+{%- from "base.njk" import icon -%}
+  <section class="hero" style="padding-bottom:10px;">
+    <div class="container" style="max-width:720px; text-align:center; margin:0 auto;">
+      <span class="eyebrow">Pricing</span>
+      <h1>Simple, straightforward pricing</h1>
+      <p style="font-size:1.15rem; color:var(--ink-soft);">No hidden fees, no packages to decode &mdash; just clear per-person rates.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <p class="text-soft center" style="max-width:520px; margin:0 auto 28px;">{{ offers.note }}</p>
+      <div class="pricing-grid pricing-grid-4">
+        {%- for t in offers.tiers %}
+        <div class="price-card{% if t.featured %} featured{% endif %}">
+          <h3>{{ t.title }}</h3>
+          <p class="text-soft">{{ t.players }}</p>
+          <div class="price-tag">${{ t.price }} <small>/ {{ t.unit }}</small></div>
+          <ul class="price-list">
+            {%- for feat in t.features %}
+            <li>{{ icon('check') }}<span>{{ feat }}</span></li>
+            {%- endfor %}
+          </ul>
+          <a class="btn {% if t.featured %}btn-primary{% else %}btn-secondary{% endif %} center" href="contact.html" style="justify-content:center;">Book This</a>
+        </div>
+        {%- endfor %}
+      </div>
+
+      <div class="card" style="margin-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center;">
+        <div>
+          <h3 style="margin-bottom:4px;">{{ offers.videoReview.title }}</h3>
+          <p class="text-soft" style="margin:0;">{{ offers.videoReview.description }}</p>
+        </div>
+        <div class="price-tag" style="margin:0;">${{ offers.videoReview.price }}</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white">
+    <div class="container" style="max-width:760px;">
+      <div class="section-head left">
+        <h2>Good to know</h2>
+      </div>
+      {%- for item in faq.pricing %}
+      <div class="faq-item">
+        <h3>{{ item.q }}</h3>
+        <p>{{ item.a }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-band">
+        <h2>Ready to book?</h2>
+        <p style="max-width:520px; margin:0 auto 24px;">Let's find a time that works and get you on the court.</p>
+        <a class="btn btn-light" href="contact.html">Book a Lesson</a>
+      </div>
+    </div>
+  </section>
